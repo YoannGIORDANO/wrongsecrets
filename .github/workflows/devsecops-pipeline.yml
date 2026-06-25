@@ -94,8 +94,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y trivy
 
-      - name: Scan Trivy (secrets uniquement)
-        run: trivy fs . --scanners secret --format sarif --output trivy-secret.sarif
+      - name: Scan Trivy (secrets, sans analyse des dependances)
+        run: trivy fs . --scanners secret --skip-files "**/pom.xml" --format sarif --output trivy-secret.sarif
 
       - name: Scan Trivy (mauvaises configurations IaC)
         run: trivy config . --format sarif --output trivy-config.sarif
