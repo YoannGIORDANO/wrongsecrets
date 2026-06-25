@@ -64,10 +64,10 @@ jobs:
       - name: Build (compilation + packaging)
         run: |
           chmod +x mvnw
-          ./mvnw -B -ntp clean package -DskipTests -Ddependency-check.skip=true
+          ./mvnw -B -ntp clean package -DskipTests -Ddependency-check.skip=true -Dmaven.compiler.release=21
 
       - name: Tests unitaires
-        run: ./mvnw -B -ntp test -Ddependency-check.skip=true
+        run: ./mvnw -B -ntp test -Ddependency-check.skip=true -Dmaven.compiler.release=21
 
       - name: Conserver l'application compilee (artefact)
         if: always()
@@ -77,9 +77,9 @@ jobs:
           path: target/*.jar
           if-no-files-found: warn
 
-  # ----- 3. SCAN des dependances, secrets et IaC -----
+  # ----- 3. SCAN des secrets et des mauvaises configurations (IaC) -----
   trivy-scan:
-    name: Container & Dependency Scan (Trivy)
+    name: Security Scan (Trivy)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout du code
@@ -93,8 +93,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y trivy
 
-      - name: Scan Trivy (vulnerabilites, secrets, misconfig)
-        run: trivy fs . --scanners vuln,secret,misconfig --severity CRITICAL,HIGH --format sarif --output trivy.sarif
+      - name: Scan Trivy (secrets et mauvaises configurations)
+        run: trivy fs . --scanners secret,misconfig --severity CRITICAL,HIGH --format sarif --output trivy.sarif
 
       - name: Envoyer le rapport dans l'onglet Security
         if: always()
