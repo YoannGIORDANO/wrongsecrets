@@ -5,13 +5,14 @@ on:
     branches: [ "master", "main" ]
   pull_request:
     branches: [ "master", "main" ]
-  workflow_dispatch:        # permet de lancer le pipeline manuellement
+  workflow_dispatch:
 
 permissions:
   contents: read
-  security-events: write    # nécessaire pour envoyer les rapports dans l'onglet Security
+  security-events: write
 
 jobs:
+  # ----- 1. BARRIERE DE SECURITE : detection des secrets -----
   secret-scan:
     name: Secret Scanning (Gitleaks)
     runs-on: ubuntu-latest
@@ -33,13 +34,79 @@ jobs:
       - name: Envoyer le rapport dans l'onglet Security
         if: always()
         continue-on-error: true
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: gitleaks.sarif
+          category: gitleaks
 
-      - name: Conserver le rapport comme artefact
+      - name: Conserver le rapport (artefact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: gitleaks-sarif-report
           path: gitleaks.sarif
+
+  # ----- 2. BUILD & TEST de l'application -----
+  build-and-test:
+    name: Build & Test (Maven)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Installer Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Build (compilation + packaging)
+        run: |
+          chmod +x mvnw
+          ./mvnw -B -ntp clean package -DskipTests -Ddependency-check.skip=true
+
+      - name: Tests unitaires
+        run: ./mvnw -B -ntp test -Ddependency-check.skip=true
+
+      - name: Conserver l'application compilee (artefact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-jar
+          path: target/*.jar
+          if-no-files-found: warn
+
+  # ----- 3. SCAN des dependances, secrets et IaC -----
+  trivy-scan:
+    name: Container & Dependency Scan (Trivy)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Installer Trivy
+        run: |
+          sudo apt-get install -y wget gnupg
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+          echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install -y trivy
+
+      - name: Scan Trivy (vulnerabilites, secrets, misconfig)
+        run: trivy fs . --scanners vuln,secret,misconfig --severity CRITICAL,HIGH --format sarif --output trivy.sarif
+
+      - name: Envoyer le rapport dans l'onglet Security
+        if: always()
+        continue-on-error: true
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: trivy.sarif
+          category: trivy
+
+      - name: Conserver le rapport (artefact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-sarif-report
+          path: trivy.sarif
