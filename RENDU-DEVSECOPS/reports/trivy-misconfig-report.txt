@@ -1,0 +1,2833 @@
+2026-06-25T11:21:49+02:00	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-06-25T11:21:49+02:00	INFO	[checks-client] Need to update the checks bundle
+2026-06-25T11:21:49+02:00	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------------------------------] 100.00% ? p/s 100ms2026-06-25T11:21:50+02:00	INFO	[terraform scanner] Scanning root module	file_path="aws"
+2026-06-25T11:21:55+02:00	INFO	[terraform scanner] Scanning root module	file_path="aws/shared-state"
+2026-06-25T11:21:55+02:00	INFO	[terraform scanner] Scanning root module	file_path="azure"
+2026-06-25T11:21:55+02:00	INFO	[terraform scanner] Scanning root module	file_path="azure/shared-state"
+2026-06-25T11:21:55+02:00	INFO	[terraform scanner] Scanning root module	file_path="gcp"
+2026-06-25T11:21:55+02:00	WARN	[terraform parser] Variable values were not found in the environment or variable files. Evaluating may not work correctly.	module="root" variables="project_id"
+2026-06-25T11:21:55+02:00	INFO	[terraform scanner] Scanning root module	file_path="gcp/shared-state"
+2026-06-25T11:21:56+02:00	INFO	Detected config files	num=50
+
+Report Summary
+
+┌────────────────────────────────────────────────┬────────────┬───────────────────┐
+│                     Target                     │    Type    │ Misconfigurations │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ Dockerfile                                     │ dockerfile │         7         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ Dockerfile.web                                 │ dockerfile │        10         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws                                            │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/ebs-csi-gp3.yaml                       │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/ingress-class-params.yaml              │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/ingress-class.yaml                     │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/secret-challenge-vault-deployment.yml  │ kubernetes │         4         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/secret-challenge-vault-ingress.yml     │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/secret-challenge-vault-service.yml     │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/k8s/secret-volume.yml                      │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/secrets.tf                                 │ terraform  │         2         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/shared-state                               │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ aws/shared-state/main.tf                       │ terraform  │         8         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure                                          │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/k8s/lb.yml                               │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/k8s/workspace-psa.yml                    │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/main.tf                                  │ terraform  │         5         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/secrets.tf                               │ terraform  │         8         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/shared-state                             │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ azure/shared-state/main.tf                     │ terraform  │         5         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp                                            │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/k8s/k8s-gke-ingress.yaml                   │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/k8s/k8s-gke-service.yaml                   │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/main.tf                                    │ terraform  │         6         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/shared-state                               │ terraform  │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/shared-state/main.tf                       │ terraform  │         3         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ gcp/vpc.tf                                     │ terraform  │         6         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge33.yml                            │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge53/Dockerfile                     │ dockerfile │         2         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge53/Dockerfile.debug               │ dockerfile │         2         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge53/debug-container.yml            │ kubernetes │        11         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge53/secret-challenge53-sidecar.yml │ kubernetes │        21         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/challenge53/secret-challenge53.yml         │ kubernetes │         6         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/sealed-challenge48.json                    │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/sealed-secret-controller.yaml              │ kubernetes │        15         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/secret-challenge-deployment.yml            │ kubernetes │         4         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/secret-challenge-vault-deployment.yml      │ kubernetes │         4         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/secrets-config.yml                         │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/secrets-secret.yml                         │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ k8s/workspace-psa.yml                          │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/challenge33.yml                     │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secret-challenge-ctf-deployment.yml │ kubernetes │         3         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secret-challenge-deployment.yml     │ kubernetes │         3         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secrets-config.yml                  │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secrets-secret.yml                  │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secrets-service-ctf.yml             │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ okteto/k8s/secrets-service.yml                 │ kubernetes │         0         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ terraform-aws-modules/eks/aws/main.tf          │ terraform  │         3         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ terraform-aws-modules/eks/aws/node_groups.tf   │ terraform  │         1         │
+├────────────────────────────────────────────────┼────────────┼───────────────────┤
+│ terraform-aws-modules/vpc/aws/main.tf          │ terraform  │         1         │
+└────────────────────────────────────────────────┴────────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+Dockerfile (dockerfile)
+=======================
+Tests: 32 (SUCCESSES: 25, FAILURES: 7)
+Failures: 7 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 0, CRITICAL: 6)
+
+DS-0026 (LOW): Add HEALTHCHECK instruction in your Dockerfile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.
+
+See https://avd.aquasec.com/misconfig/ds-0026
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "ARG_BASED_PASSWORD" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  16 [ ENV ARG_BASED_PASSWORD=$argBasedPassword
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "AZURE_KEY_VAULT_ENABLED" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:19
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  19 [ ENV AZURE_KEY_VAULT_ENABLED=false
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "DOCKER_ENV_PASSWORD" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:18
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  18 [ ENV DOCKER_ENV_PASSWORD="This is it"
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "GOOGLE_SERVICE_ACCOUNT_KEY" in ARG
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:22
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  22 [ ARG GOOGLE_SERVICE_ACCOUNT_KEY="if_you_see_this_configure_the_google_service_account_properly"
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "GOOGLE_SERVICE_ACCOUNT_KEY" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:24
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 [ ENV GOOGLE_SERVICE_ACCOUNT_KEY=$GOOGLE_SERVICE_ACCOUNT_KEY
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "WRONGSECRETS_MCP_SECRET" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile:21
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  21 [ ENV WRONGSECRETS_MCP_SECRET=MCPStolenSecret42!
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+Dockerfile.web (dockerfile)
+===========================
+Tests: 34 (SUCCESSES: 24, FAILURES: 10)
+Failures: 10 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 8)
+
+DS-0002 (HIGH): Specify at least 1 USER command in Dockerfile with non-root user as argument
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.
+
+See https://avd.aquasec.com/misconfig/ds-0002
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0026 (LOW): Add HEALTHCHECK instruction in your Dockerfile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.
+
+See https://avd.aquasec.com/misconfig/ds-0026
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "CHALLENGE_RANDO_KEY_CTF_TO_PROVIDE_TO_HOST" in ARG
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:11
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 [ ARG CHALLENGE_RANDO_KEY_CTF_TO_PROVIDE_TO_HOST="not_set"
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "CTF_KEY" in ARG
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:13
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  13 [ ARG CTF_KEY=TRwzkRJnHOTckssAeyJbysWgP!Qc2T
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "GOOGLE_SERVICE_ACCOUNT_KEY" in ARG
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:42
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  42 [ ARG GOOGLE_SERVICE_ACCOUNT_KEY="if_you_see_this_configure_the_google_service_account_properly"
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "GOOGLE_SERVICE_ACCOUNT_KEY" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:44
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  44 [ ENV GOOGLE_SERVICE_ACCOUNT_KEY=$GOOGLE_SERVICE_ACCOUNT_KEY
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "SPECIAL_K8S_SECRET" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:29
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  29 [ ENV SPECIAL_K8S_SECRET=$CHALLENGE_5_VALUE
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "SPECIAL_SPECIAL_K8S_SECRET" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:30
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  30 [ ENV SPECIAL_SPECIAL_K8S_SECRET=$CHALLENGE_6_VALUE
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "challenge_rando_key_ctf_to_provide_to_host_value" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:34
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  34 [ ENV challenge_rando_key_ctf_to_provide_to_host_value=$CHALLENGE_RANDO_KEY_CTF_TO_PROVIDE_TO_HOST
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0031 (CRITICAL): Possible exposure of secret env "ctf_key" in ENV
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds-0031
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Dockerfile.web:24
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 [ ENV ctf_key=$CTF_KEY
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+aws/k8s/secret-challenge-vault-deployment.yml (kubernetes)
+==========================================================
+Tests: 101 (SUCCESSES: 97, FAILURES: 4)
+Failures: 4 (UNKNOWN: 0, LOW: 3, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0020 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/k8s/secret-challenge-vault-deployment.yml:61-143
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  61 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-k8s-vault
+  62 │           imagePullPolicy: IfNotPresent
+  63 │           name: secret-challenge
+  64 │           command: ["/bin/sh"]
+  65 │           args:
+  66 │             [
+  67 │               "-c",
+  68 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  69 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/k8s/secret-challenge-vault-deployment.yml:61-143
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  61 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-k8s-vault
+  62 │           imagePullPolicy: IfNotPresent
+  63 │           name: secret-challenge
+  64 │           command: ["/bin/sh"]
+  65 │           args:
+  66 │             [
+  67 │               "-c",
+  68 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  69 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): deployment secret-challenge in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/k8s/secret-challenge-vault-deployment.yml:3-7
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 │   labels:
+   5 │     app: secret-challenge
+   6 │   name: secret-challenge
+   7 └   namespace: default
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge in deployment secret-challenge (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/k8s/secret-challenge-vault-deployment.yml:61-143
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  61 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-k8s-vault
+  62 │           imagePullPolicy: IfNotPresent
+  63 │           name: secret-challenge
+  64 │           command: ["/bin/sh"]
+  65 │           args:
+  66 │             [
+  67 │               "-c",
+  68 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  69 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+aws/secrets.tf (terraform)
+==========================
+Tests: 2 (SUCCESSES: 0, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 2, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+AWS-0098 (LOW): Secret explicitly uses the default key.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Secrets Manager encrypts secrets by default using a default key created by AWS. To ensure control and granularity of secret encryption, CMK's should be used explicitly.
+
+
+See https://avd.aquasec.com/misconfig/aws-0098
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/secrets.tf:5-8
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   5 ┌ resource "aws_secretsmanager_secret" "secret" {
+   6 │   name                    = "wrongsecret"
+   7 │   recovery_window_in_days = 0
+   8 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0098 (LOW): Secret explicitly uses the default key.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Secrets Manager encrypts secrets by default using a default key created by AWS. To ensure control and granularity of secret encryption, CMK's should be used explicitly.
+
+
+See https://avd.aquasec.com/misconfig/aws-0098
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/secrets.tf:49-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  49 ┌ resource "aws_secretsmanager_secret" "secret_2" {
+  50 │   name                    = "wrongsecret-2"
+  51 │   recovery_window_in_days = 0
+  52 │   tags                    = var.tags
+  53 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+aws/shared-state/main.tf (terraform)
+====================================
+Tests: 8 (SUCCESSES: 0, FAILURES: 8)
+Failures: 8 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 5, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:15
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  15 [ resource "aws_s3_bucket" "state" {}
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ aws/shared-state/main.tf:17-24
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  17 ┌ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+  18 │   bucket = aws_s3_bucket.state.id
+  19 │   rule {
+  20 │     apply_server_side_encryption_by_default {
+  21 │       sse_algorithm = "AES256"
+  22 │     }
+  23 │   }
+  24 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+azure/main.tf (terraform)
+=========================
+Tests: 5 (SUCCESSES: 0, FAILURES: 5)
+Failures: 5 (UNKNOWN: 0, LOW: 2, MEDIUM: 2, HIGH: 1, CRITICAL: 0)
+
+AZU-0040 (MEDIUM): Cluster does not have logging enabled via OMS Agent.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure AKS logging to Azure Monitoring is configured for containers to monitor the performance of workloads.
+
+
+See https://avd.aquasec.com/misconfig/azu-0040
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/main.tf:48-75
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌ resource "azurerm_kubernetes_cluster" "cluster" {
+  49 │   name                = var.cluster_name
+  50 │   location            = azurerm_resource_group.default.location
+  51 │   resource_group_name = azurerm_resource_group.default.name
+  52 │   dns_prefix          = "wrongsecrets"
+  53 │ 
+  54 │   kubernetes_version = var.cluster_version
+  55 │ 
+  56 └   api_server_access_profile {
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0043 (HIGH): Kubernetes cluster does not have a network policy set.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The Kubernetes object type NetworkPolicy should be defined to have opportunity allow or block traffic to pods, as in a Kubernetes cluster configured with default settings, all pods can discover and communicate with each other without any restrictions.
+
+
+See https://avd.aquasec.com/misconfig/azu-0043
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/main.tf:60-62
+   via azure/main.tf:48-75 (azurerm_kubernetes_cluster.cluster)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48   resource "azurerm_kubernetes_cluster" "cluster" {
+  ..   
+  60 ┌   network_profile {
+  61 │     network_plugin = "azure"
+  62 └   }
+  ..   
+  75   }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0065 (MEDIUM): Cluster does not have private cluster enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A public AKS API server endpoint increases exposure to unauthorized access or attack. Enable private cluster to ensure the API server endpoint is only accessible from within the virtual network.
+
+
+See https://avd.aquasec.com/misconfig/azu-0065
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/main.tf:48-75
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌ resource "azurerm_kubernetes_cluster" "cluster" {
+  49 │   name                = var.cluster_name
+  50 │   location            = azurerm_resource_group.default.location
+  51 │   resource_group_name = azurerm_resource_group.default.name
+  52 │   dns_prefix          = "wrongsecrets"
+  53 │ 
+  54 │   kubernetes_version = var.cluster_version
+  55 │ 
+  56 └   api_server_access_profile {
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0066 (LOW): Cluster does not have Azure Policy add-on enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Azure Kubernetes Service should enable Azure Policy Add-On to enforce compliance and governance policies on the cluster. The add-on extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA).
+
+
+See https://avd.aquasec.com/misconfig/azu-0066
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/main.tf:48-75
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌ resource "azurerm_kubernetes_cluster" "cluster" {
+  49 │   name                = var.cluster_name
+  50 │   location            = azurerm_resource_group.default.location
+  51 │   resource_group_name = azurerm_resource_group.default.name
+  52 │   dns_prefix          = "wrongsecrets"
+  53 │ 
+  54 │   kubernetes_version = var.cluster_version
+  55 │ 
+  56 └   api_server_access_profile {
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0067 (LOW): Cluster does not have disk encryption set ID configured.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Azure Kubernetes clusters should define a disk encryption set ID to ensure encrypted storage for OS and data disks. This provides an additional layer of security by encrypting data at rest.
+
+
+See https://avd.aquasec.com/misconfig/azu-0067
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/main.tf:48-75
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌ resource "azurerm_kubernetes_cluster" "cluster" {
+  49 │   name                = var.cluster_name
+  50 │   location            = azurerm_resource_group.default.location
+  51 │   resource_group_name = azurerm_resource_group.default.name
+  52 │   dns_prefix          = "wrongsecrets"
+  53 │ 
+  54 │   kubernetes_version = var.cluster_version
+  55 │ 
+  56 └   api_server_access_profile {
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+azure/secrets.tf (terraform)
+============================
+Tests: 8 (SUCCESSES: 0, FAILURES: 8)
+Failures: 8 (UNKNOWN: 0, LOW: 6, MEDIUM: 1, HIGH: 0, CRITICAL: 1)
+
+AZU-0013 (CRITICAL): Vault network ACL does not block access by default.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Network ACLs allow you to reduce your exposure to risk by limiting what can access your key vault.
+
+The default action of the Network ACL should be set to deny for when IPs are not matched. Azure services can be allowed to bypass.
+
+
+See https://avd.aquasec.com/misconfig/azu-0013
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:17-26
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  17 ┌ resource "azurerm_key_vault" "vault" {
+  18 │   name                = "wrongsecrets-${random_string.suffix.result}-${random_integer.suffix.result}"
+  19 │   location            = azurerm_resource_group.default.location
+  20 │   resource_group_name = azurerm_resource_group.default.name
+  21 │   tenant_id           = data.azurerm_client_config.current.tenant_id
+  22 │   sku_name            = "standard"
+  23 │ 
+  24 │   soft_delete_retention_days = 7
+  25 │   purge_protection_enabled   = false
+  26 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0015 (LOW): Secret does not have a content-type specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Content Type is an optional Key Vault Secret behavior and is not enabled by default.
+
+Clients may specify the content type of a secret to assist in interpreting the secret data when it's retrieved. The maximum length of this field is 255 characters. There are no pre-defined values. The suggested usage is as a hint for interpreting the secret data.
+
+
+See https://avd.aquasec.com/misconfig/azu-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:55-63
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  55 ┌ resource "azurerm_key_vault_secret" "wrongsecret_1" {
+  56 │   name         = "wrongsecret"
+  57 │   value        = random_password.password.result
+  58 │   key_vault_id = azurerm_key_vault.vault.id
+  59 │ 
+  60 │   depends_on = [
+  61 │     azurerm_key_vault_access_policy.user
+  62 │   ]
+  63 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0015 (LOW): Secret does not have a content-type specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Content Type is an optional Key Vault Secret behavior and is not enabled by default.
+
+Clients may specify the content type of a secret to assist in interpreting the secret data when it's retrieved. The maximum length of this field is 255 characters. There are no pre-defined values. The suggested usage is as a hint for interpreting the secret data.
+
+
+See https://avd.aquasec.com/misconfig/azu-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:69-83
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  69 ┌ resource "azurerm_key_vault_secret" "wrongsecret_2" {
+  70 │   name         = "wrongsecret-2"
+  71 │   value        = "Hello from Terraform" # bootstrap something, not used in challenge
+  72 │   key_vault_id = azurerm_key_vault.vault.id
+  73 │ 
+  74 │   lifecycle {
+  75 │     ignore_changes = [
+  76 │       value
+  77 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0015 (LOW): Secret does not have a content-type specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Content Type is an optional Key Vault Secret behavior and is not enabled by default.
+
+Clients may specify the content type of a secret to assist in interpreting the secret data when it's retrieved. The maximum length of this field is 255 characters. There are no pre-defined values. The suggested usage is as a hint for interpreting the secret data.
+
+
+See https://avd.aquasec.com/misconfig/azu-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:89-103
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  89 ┌ resource "azurerm_key_vault_secret" "wrongsecret_3" {
+  90 │   name         = "wrongsecret-3"
+  91 │   value        = "Hello from Terraform 2" # bootstrap something, not used in challenge
+  92 │   key_vault_id = azurerm_key_vault.vault.id
+  93 │ 
+  94 │   lifecycle {
+  95 │     ignore_changes = [
+  96 │       value
+  97 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0016 (MEDIUM): Vault does not have purge protection enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Purge protection is an optional Key Vault behavior and is not enabled by default.
+
+Purge protection can only be enabled once soft-delete is enabled. It can be turned on via CLI or PowerShell.
+
+
+See https://avd.aquasec.com/misconfig/azu-0016
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:25
+   via azure/secrets.tf:17-26 (azurerm_key_vault.vault)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  17   resource "azurerm_key_vault" "vault" {
+  18     name                = "wrongsecrets-${random_string.suffix.result}-${random_integer.suffix.result}"
+  19     location            = azurerm_resource_group.default.location
+  20     resource_group_name = azurerm_resource_group.default.name
+  21     tenant_id           = data.azurerm_client_config.current.tenant_id
+  22     sku_name            = "standard"
+  23   
+  24     soft_delete_retention_days = 7
+  25 [   purge_protection_enabled   = false
+  26   }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0017 (LOW): Secret should have an expiry date specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Expiration Date is an optional Key Vault Secret behavior and is not set by default.
+
+Set when the resource will be become inactive.
+
+
+See https://avd.aquasec.com/misconfig/azu-0017
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:55-63
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  55 ┌ resource "azurerm_key_vault_secret" "wrongsecret_1" {
+  56 │   name         = "wrongsecret"
+  57 │   value        = random_password.password.result
+  58 │   key_vault_id = azurerm_key_vault.vault.id
+  59 │ 
+  60 │   depends_on = [
+  61 │     azurerm_key_vault_access_policy.user
+  62 │   ]
+  63 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0017 (LOW): Secret should have an expiry date specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Expiration Date is an optional Key Vault Secret behavior and is not set by default.
+
+Set when the resource will be become inactive.
+
+
+See https://avd.aquasec.com/misconfig/azu-0017
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:69-83
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  69 ┌ resource "azurerm_key_vault_secret" "wrongsecret_2" {
+  70 │   name         = "wrongsecret-2"
+  71 │   value        = "Hello from Terraform" # bootstrap something, not used in challenge
+  72 │   key_vault_id = azurerm_key_vault.vault.id
+  73 │ 
+  74 │   lifecycle {
+  75 │     ignore_changes = [
+  76 │       value
+  77 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0017 (LOW): Secret should have an expiry date specified.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Expiration Date is an optional Key Vault Secret behavior and is not set by default.
+
+Set when the resource will be become inactive.
+
+
+See https://avd.aquasec.com/misconfig/azu-0017
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/secrets.tf:89-103
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  89 ┌ resource "azurerm_key_vault_secret" "wrongsecret_3" {
+  90 │   name         = "wrongsecret-3"
+  91 │   value        = "Hello from Terraform 2" # bootstrap something, not used in challenge
+  92 │   key_vault_id = azurerm_key_vault.vault.id
+  93 │ 
+  94 │   lifecycle {
+  95 │     ignore_changes = [
+  96 │       value
+  97 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+azure/shared-state/main.tf (terraform)
+======================================
+Tests: 5 (SUCCESSES: 0, FAILURES: 5)
+Failures: 5 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 0, CRITICAL: 1)
+
+AZU-0012 (CRITICAL): No network rules defined and default action allows access.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The default_action for network rules should come into effect when no other rules are matched.
+The default action should be set to Deny.
+
+
+See https://avd.aquasec.com/misconfig/azu-0012
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/shared-state/main.tf:46-52
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  46 ┌ resource "azurerm_storage_account" "account" {
+  47 │   name                     = format("wrongsecrets%s%s", random_string.suffix.result, random_integer.suffix.result)
+  48 │   resource_group_name      = azurerm_resource_group.default.name
+  49 │   location                 = azurerm_resource_group.default.location
+  50 │   account_tier             = "Standard"
+  51 │   account_replication_type = "LRS"
+  52 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0057 (MEDIUM): Storage account does not have logging enabled for any service.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Storage Analytics logs detailed information about successful and failed requests to a storage service.
+This information can be used to monitor individual requests and to diagnose issues with a storage service.
+Logging should be enabled for at least one storage service type.
+
+
+See https://avd.aquasec.com/misconfig/azu-0057
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/shared-state/main.tf:46-52
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  46 ┌ resource "azurerm_storage_account" "account" {
+  47 │   name                     = format("wrongsecrets%s%s", random_string.suffix.result, random_integer.suffix.result)
+  48 │   resource_group_name      = azurerm_resource_group.default.name
+  49 │   location                 = azurerm_resource_group.default.location
+  50 │   account_tier             = "Standard"
+  51 │   account_replication_type = "LRS"
+  52 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0058 (LOW): Storage account does not use geo-redundant replication.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Geo-redundant storage (GRS) replicates your data to a secondary region that is hundreds of miles away from the primary region.
+This provides an additional level of durability for your data in the event of a complete regional outage or a disaster.
+Options include GRS, RAGRS, GZRS, and RAGZRS for geo-redundancy.
+
+
+See https://avd.aquasec.com/misconfig/azu-0058
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/shared-state/main.tf:51
+   via azure/shared-state/main.tf:46-52 (azurerm_storage_account.account)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  46   resource "azurerm_storage_account" "account" {
+  47     name                     = format("wrongsecrets%s%s", random_string.suffix.result, random_integer.suffix.result)
+  48     resource_group_name      = azurerm_resource_group.default.name
+  49     location                 = azurerm_resource_group.default.location
+  50     account_tier             = "Standard"
+  51 [   account_replication_type = "LRS"
+  52   }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0060 (MEDIUM): Storage account with blob containers should use customer-managed keys for encryption.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Storage accounts should use customer-managed keys (CMK) for encryption to provide additional control over the encryption keys.
+Customer-managed keys allow you to create, rotate, disable, and revoke access controls.
+They also provide greater flexibility to audit the encryption keys that are used to protect your data.
+
+
+See https://avd.aquasec.com/misconfig/azu-0060
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/shared-state/main.tf:46-52
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  46 ┌ resource "azurerm_storage_account" "account" {
+  47 │   name                     = format("wrongsecrets%s%s", random_string.suffix.result, random_integer.suffix.result)
+  48 │   resource_group_name      = azurerm_resource_group.default.name
+  49 │   location                 = azurerm_resource_group.default.location
+  50 │   account_tier             = "Standard"
+  51 │   account_replication_type = "LRS"
+  52 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AZU-0061 (MEDIUM): Storage account does not have infrastructure encryption enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Infrastructure encryption provides an additional layer of encryption at the infrastructure level.
+When infrastructure encryption is enabled, data in the storage account is encrypted twice -
+once at the service level and once at the infrastructure level with two different encryption algorithms.
+This provides double encryption for enhanced security.
+
+
+See https://avd.aquasec.com/misconfig/azu-0061
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ azure/shared-state/main.tf:46-52
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  46 ┌ resource "azurerm_storage_account" "account" {
+  47 │   name                     = format("wrongsecrets%s%s", random_string.suffix.result, random_integer.suffix.result)
+  48 │   resource_group_name      = azurerm_resource_group.default.name
+  49 │   location                 = azurerm_resource_group.default.location
+  50 │   account_tier             = "Standard"
+  51 │   account_replication_type = "LRS"
+  52 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+gcp/main.tf (terraform)
+=======================
+Tests: 6 (SUCCESSES: 0, FAILURES: 6)
+Failures: 6 (UNKNOWN: 0, LOW: 2, MEDIUM: 2, HIGH: 2, CRITICAL: 0)
+
+GCP-0048 (HIGH): Cluster has legacy metadata endpoints enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The Compute Engine instance metadata server exposes legacy v0.1 and v1beta1 endpoints, which do not enforce metadata query headers.
+
+This is a feature in the v1 APIs that makes it more difficult for a potential attacker to retrieve instance metadata.
+
+Unless specifically required, we recommend you disable these legacy APIs.
+
+When setting the <code>metadata</code> block, the default value for <code>disable-legacy-endpoints</code> is set to true, they should not be explicitly enabled.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0048
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:42-53
+   via gcp/main.tf:26-66 (google_container_cluster.gke)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26   resource "google_container_cluster" "gke" {
+  ..   
+  42 ┌   node_config {
+  43 │     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+  44 │     service_account = google_service_account.wrongsecrets_cluster.email
+  45 │     machine_type    = "e2-standard-2"
+  46 │     oauth_scopes = [
+  47 │       "https://www.googleapis.com/auth/cloud-platform"
+  48 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0049 (LOW): Cluster has IP aliasing disabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+IP aliasing allows the reuse of public IPs internally, removing the need for a NAT gateway.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0049
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:26-66
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26 ┌ resource "google_container_cluster" "gke" {
+  27 │   name               = var.cluster_name
+  28 │   location           = var.region
+  29 │   initial_node_count = 1
+  30 │ 
+  31 │   min_master_version = var.cluster_version
+  32 │ 
+  33 │   network    = google_compute_network.vpc.name
+  34 └   subnetwork = google_compute_subnetwork.node_subnet.name
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0051 (LOW): Cluster does not use GCE resource labels.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Labels make it easier to manage assets and differentiate between clusters and environments, allowing the mapping of computational resources to the wider organisational structure.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0051
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:26-66
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26 ┌ resource "google_container_cluster" "gke" {
+  27 │   name               = var.cluster_name
+  28 │   location           = var.region
+  29 │   initial_node_count = 1
+  30 │ 
+  31 │   min_master_version = var.cluster_version
+  32 │ 
+  33 │   network    = google_compute_network.vpc.name
+  34 └   subnetwork = google_compute_subnetwork.node_subnet.name
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0056 (MEDIUM): Cluster does not have a network policy enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enabling a network policy allows the segregation of network traffic by namespace
+
+
+See https://avd.aquasec.com/misconfig/gcp-0056
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:26-66
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26 ┌ resource "google_container_cluster" "gke" {
+  27 │   name               = var.cluster_name
+  28 │   location           = var.region
+  29 │   initial_node_count = 1
+  30 │ 
+  31 │   min_master_version = var.cluster_version
+  32 │ 
+  33 │   network    = google_compute_network.vpc.name
+  34 └   subnetwork = google_compute_subnetwork.node_subnet.name
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0057 (HIGH): Cluster exposes node metadata of pools by default.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+In provider versions prior to 4:
+The attribute <code>workload_metadata_config.node_metadata</code> configures how node metadata is exposed to workloads. It should be set to <code>SECURE</code> to limit metadata exposure, or <code>GKE_METADATA_SERVER</code> if Workload Identity is enabled.
+
+Starting with provider version 4:
+The attribute <code>node_metadata</code> has been removed. Instead, <code>workload_metadata_configuration.mode</code> controls node metadata exposure. When Workload Identity is enabled, it should be set to <code>GKE_METADATA</code> to prevent unnecessary exposure of the metadata API to workloads.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0057
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:42-53
+   via gcp/main.tf:26-66 (google_container_cluster.gke)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26   resource "google_container_cluster" "gke" {
+  ..   
+  42 ┌   node_config {
+  43 │     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+  44 │     service_account = google_service_account.wrongsecrets_cluster.email
+  45 │     machine_type    = "e2-standard-2"
+  46 │     oauth_scopes = [
+  47 │       "https://www.googleapis.com/auth/cloud-platform"
+  48 └     ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0059 (MEDIUM): Cluster does not have private nodes.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enabling private nodes on a cluster ensures the nodes are only available internally as they will only be assigned internal addresses.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0059
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/main.tf:26-66
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  26 ┌ resource "google_container_cluster" "gke" {
+  27 │   name               = var.cluster_name
+  28 │   location           = var.region
+  29 │   initial_node_count = 1
+  30 │ 
+  31 │   min_master_version = var.cluster_version
+  32 │ 
+  33 │   network    = google_compute_network.vpc.name
+  34 └   subnetwork = google_compute_subnetwork.node_subnet.name
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+gcp/shared-state/main.tf (terraform)
+====================================
+Tests: 3 (SUCCESSES: 0, FAILURES: 3)
+Failures: 3 (UNKNOWN: 0, LOW: 1, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+
+GCP-0002 (MEDIUM): Bucket has uniform bucket level access disabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When you enable uniform bucket-level access on a bucket, Access Control Lists (ACLs) are disabled, and only bucket-level Identity and Access Management (IAM) permissions grant access to that bucket and the objects it contains. You revoke all access granted by object ACLs and the ability to administrate permissions using bucket ACLs.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0002
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/shared-state/main.tf:25-32
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  25 ┌ resource "google_storage_bucket" "state_bucket" {
+  26 │   name     = "tfstate-wrongsecrets-${random_id.suffix.hex}"
+  27 │   location = var.region
+  28 │ 
+  29 │   versioning {
+  30 │     enabled = true
+  31 │   }
+  32 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0066 (LOW): Storage bucket encryption does not use a customer-managed key.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Using unmanaged keys makes rotation and general management difficult.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0066
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/shared-state/main.tf:25-32
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  25 ┌ resource "google_storage_bucket" "state_bucket" {
+  26 │   name     = "tfstate-wrongsecrets-${random_id.suffix.hex}"
+  27 │   location = var.region
+  28 │ 
+  29 │   versioning {
+  30 │     enabled = true
+  31 │   }
+  32 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0077 (MEDIUM): Storage bucket logging is not configured with a target log bucket.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Cloud Storage bucket access logs should be enabled for audit purposes.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0077
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/shared-state/main.tf:25-32
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  25 ┌ resource "google_storage_bucket" "state_bucket" {
+  26 │   name     = "tfstate-wrongsecrets-${random_id.suffix.hex}"
+  27 │   location = var.region
+  28 │ 
+  29 │   versioning {
+  30 │     enabled = true
+  31 │   }
+  32 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+gcp/vpc.tf (terraform)
+======================
+Tests: 6 (SUCCESSES: 0, FAILURES: 6)
+Failures: 6 (UNKNOWN: 0, LOW: 4, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+
+GCP-0029 (LOW): Subnetwork does not have VPC flow logs enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+VPC flow logs record information about all traffic, which is a vital tool in reviewing anomalous traffic.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0029
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:13-18
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  13 ┌ resource "google_compute_subnetwork" "master_subnet" {
+  14 │   name          = "${var.project_id}-master-subnet"
+  15 │   region        = var.region
+  16 │   network       = google_compute_network.vpc.name
+  17 │   ip_cidr_range = "10.32.0.0/28"
+  18 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0029 (LOW): Subnetwork does not have VPC flow logs enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+VPC flow logs record information about all traffic, which is a vital tool in reviewing anomalous traffic.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0029
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:6-11
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   6 ┌ resource "google_compute_subnetwork" "node_subnet" {
+   7 │   name          = "${var.project_id}-subnet"
+   8 │   region        = var.region
+   9 │   network       = google_compute_network.vpc.name
+  10 │   ip_cidr_range = "10.10.0.0/24"
+  11 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0075 (LOW): Subnetwork does not have Private Google Access configured.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Private Google Access allows instances in a subnet to reach Google APIs and services via internal IP, which should be enabled for private networks.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0075
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:13-18
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  13 ┌ resource "google_compute_subnetwork" "master_subnet" {
+  14 │   name          = "${var.project_id}-master-subnet"
+  15 │   region        = var.region
+  16 │   network       = google_compute_network.vpc.name
+  17 │   ip_cidr_range = "10.32.0.0/28"
+  18 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0075 (LOW): Subnetwork does not have Private Google Access configured.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Private Google Access allows instances in a subnet to reach Google APIs and services via internal IP, which should be enabled for private networks.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0075
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:6-11
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   6 ┌ resource "google_compute_subnetwork" "node_subnet" {
+   7 │   name          = "${var.project_id}-subnet"
+   8 │   region        = var.region
+   9 │   network       = google_compute_network.vpc.name
+  10 │   ip_cidr_range = "10.10.0.0/24"
+  11 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0076 (MEDIUM): Subnetwork does not have flow logs enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Flow logs for subnets should be enabled to capture network traffic details for security analysis.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0076
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:13-18
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  13 ┌ resource "google_compute_subnetwork" "master_subnet" {
+  14 │   name          = "${var.project_id}-master-subnet"
+  15 │   region        = var.region
+  16 │   network       = google_compute_network.vpc.name
+  17 │   ip_cidr_range = "10.32.0.0/28"
+  18 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+GCP-0076 (MEDIUM): Subnetwork does not have flow logs enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Flow logs for subnets should be enabled to capture network traffic details for security analysis.
+
+
+See https://avd.aquasec.com/misconfig/gcp-0076
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ gcp/vpc.tf:6-11
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   6 ┌ resource "google_compute_subnetwork" "node_subnet" {
+   7 │   name          = "${var.project_id}-subnet"
+   8 │   region        = var.region
+   9 │   network       = google_compute_network.vpc.name
+  10 │   ip_cidr_range = "10.10.0.0/24"
+  11 └ }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/challenge53/Dockerfile (dockerfile)
+=======================================
+Tests: 27 (SUCCESSES: 25, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
+
+DS-0002 (HIGH): Specify at least 1 USER command in Dockerfile with non-root user as argument
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.
+
+See https://avd.aquasec.com/misconfig/ds-0002
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0026 (LOW): Add HEALTHCHECK instruction in your Dockerfile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.
+
+See https://avd.aquasec.com/misconfig/ds-0026
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/challenge53/Dockerfile.debug (dockerfile)
+=============================================
+Tests: 27 (SUCCESSES: 25, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
+
+DS-0002 (HIGH): Specify at least 1 USER command in Dockerfile with non-root user as argument
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.
+
+See https://avd.aquasec.com/misconfig/ds-0002
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+DS-0026 (LOW): Add HEALTHCHECK instruction in your Dockerfile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.
+
+See https://avd.aquasec.com/misconfig/ds-0026
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/challenge53/debug-container.yml (kubernetes)
+================================================
+Tests: 101 (SUCCESSES: 90, FAILURES: 11)
+Failures: 11 (UNKNOWN: 0, LOW: 8, MEDIUM: 2, HIGH: 1, CRITICAL: 0)
+
+KSV-0011 (LOW): Container 'app' of Pod 'secure-pod' should set 'resources.limits.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing CPU limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0011
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0014 (HIGH): Container 'app' of Pod 'secure-pod' should set 'securityContext.readOnlyRootFilesystem' to true
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+An immutable root file system prevents applications from writing to their local disk. This can limit intrusions, as attackers will not be able to tamper with the file system or write foreign executables to disk.
+
+See https://avd.aquasec.com/misconfig/ksv-0014
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0015 (LOW): Container 'app' of Pod 'secure-pod' should set 'resources.requests.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have resource requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0016 (LOW): Container 'app' of Pod 'secure-pod' should set 'resources.requests.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have memory requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0016
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0018 (LOW): Container 'app' of Pod 'secure-pod' should set 'resources.limits.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing memory limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0018
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0020 (LOW): Container 'app' of Pod 'secure-pod' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'app' of Pod 'secure-pod' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0030 (LOW): Either Pod or Container should set 'securityContext.seccompProfile.type' to 'RuntimeDefault'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+According to pod security standard 'Seccomp', the RuntimeDefault seccomp profile must be required, or allow specific additional profiles.
+
+See https://avd.aquasec.com/misconfig/ksv-0030
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0104 (MEDIUM): container "app" of pod "secure-pod" in "default" namespace should specify a seccomp profile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A program inside the container can bypass Seccomp protection policies.
+
+See https://avd.aquasec.com/misconfig/ksv-0104
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): pod secure-pod in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:3-4
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 └   name: secure-pod
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container app in pod secure-pod (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/debug-container.yml:11-16
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  11 ┌   - name: app
+  12 │     image: jeroenwillemsen/wrongsecrets-challenge53-debug:1
+  13 │     securityContext:
+  14 │       allowPrivilegeEscalation: false
+  15 │       capabilities:
+  16 └         drop: ["ALL"]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/challenge53/secret-challenge53-sidecar.yml (kubernetes)
+===========================================================
+Tests: 106 (SUCCESSES: 85, FAILURES: 21)
+Failures: 21 (UNKNOWN: 0, LOW: 15, MEDIUM: 5, HIGH: 1, CRITICAL: 0)
+
+KSV-0001 (MEDIUM): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'securityContext.allowPrivilegeEscalation' to false
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A program inside the container can elevate its own privileges and run as root, which might give the program control over the container and node.
+
+See https://avd.aquasec.com/misconfig/ksv-0001
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0003 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should add 'ALL' to 'securityContext.capabilities.drop'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The container should drop all default capabilities and add only those that are needed for its execution.
+
+See https://avd.aquasec.com/misconfig/ksv-0003
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0004 (LOW): Container 'sidecar' of 'deployment' 'secret-challenge-53' in 'default' namespace should set securityContext.capabilities.drop
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Security best practices require containers to run with minimal required capabilities.
+
+See https://avd.aquasec.com/misconfig/ksv-0004
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0011 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'resources.limits.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing CPU limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0011
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:24-47
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0011 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'resources.limits.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing CPU limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0011
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0012 (MEDIUM): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'securityContext.runAsNonRoot' to true
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the running image to run as a non-root user to ensure least privileges.
+
+See https://avd.aquasec.com/misconfig/ksv-0012
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0014 (HIGH): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'securityContext.readOnlyRootFilesystem' to true
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+An immutable root file system prevents applications from writing to their local disk. This can limit intrusions, as attackers will not be able to tamper with the file system or write foreign executables to disk.
+
+See https://avd.aquasec.com/misconfig/ksv-0014
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0015 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'resources.requests.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have resource requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0016 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'resources.requests.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have memory requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0016
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0018 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'resources.limits.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing memory limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0018
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:24-47
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0018 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'resources.limits.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing memory limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0018
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0020 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:24-47
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0020 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:24-47
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'sidecar' of Deployment 'secret-challenge-53' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0030 (LOW): Either Pod or Container should set 'securityContext.seccompProfile.type' to 'RuntimeDefault'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+According to pod security standard 'Seccomp', the RuntimeDefault seccomp profile must be required, or allow specific additional profiles.
+
+See https://avd.aquasec.com/misconfig/ksv-0030
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0104 (MEDIUM): container "sidecar" of deployment "secret-challenge-53" in "default" namespace should specify a seccomp profile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A program inside the container can bypass Seccomp protection policies.
+
+See https://avd.aquasec.com/misconfig/ksv-0104
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0106 (LOW): container should drop all
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Containers must drop ALL capabilities, and are only permitted to add back the NET_BIND_SERVICE capability.
+
+See https://avd.aquasec.com/misconfig/ksv-0106
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): deployment secret-challenge-53 in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:3-5
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 │   name: secret-challenge-53
+   5 └   namespace: default
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge-53 in deployment secret-challenge-53 (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:24-47
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container sidecar in deployment secret-challenge-53 (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53-sidecar.yml:48-54
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  48 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53-debug:1.13.5
+  49 │         name: sidecar
+  50 │         imagePullPolicy: IfNotPresent
+  51 │         command: ["/bin/sh", "-c", "while true; do ls /shared-data; sleep 10; done"]
+  52 │         volumeMounts:
+  53 │           - name: shared-data
+  54 └             mountPath: /shared-data
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/challenge53/secret-challenge53.yml (kubernetes)
+===================================================
+Tests: 101 (SUCCESSES: 95, FAILURES: 6)
+Failures: 6 (UNKNOWN: 0, LOW: 5, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0011 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'resources.limits.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing CPU limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0011
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:24-41
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0018 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'resources.limits.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing memory limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0018
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:24-41
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0020 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:24-41
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge-53' of Deployment 'secret-challenge-53' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:24-41
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): deployment secret-challenge-53 in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:3-5
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 │   name: secret-challenge-53
+   5 └   namespace: default
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge-53 in deployment secret-challenge-53 (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/challenge53/secret-challenge53.yml:24-41
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  24 ┌       - image: jeroenwillemsen/wrongsecrets-challenge53:1.13.5
+  25 │         name: secret-challenge-53
+  26 │         imagePullPolicy: IfNotPresent
+  27 │         resources:
+  28 │           requests:
+  29 │             memory: '32Mi'
+  30 │             cpu: '50m'
+  31 │             ephemeral-storage: '100Mi'
+  32 └         securityContext:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/sealed-secret-controller.yaml (kubernetes)
+==============================================
+Tests: 101 (SUCCESSES: 86, FAILURES: 15)
+Failures: 15 (UNKNOWN: 0, LOW: 10, MEDIUM: 5, HIGH: 0, CRITICAL: 0)
+
+KSV-0001 (MEDIUM): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'securityContext.allowPrivilegeEscalation' to false
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A program inside the container can elevate its own privileges and run as root, which might give the program control over the container and node.
+
+See https://avd.aquasec.com/misconfig/ksv-0001
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0003 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should add 'ALL' to 'securityContext.capabilities.drop'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+The container should drop all default capabilities and add only those that are needed for its execution.
+
+See https://avd.aquasec.com/misconfig/ksv-0003
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0004 (LOW): Container 'sealed-secrets-controller' of 'deployment' 'sealed-secrets-controller' in 'kube-system' namespace should set securityContext.capabilities.drop
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Security best practices require containers to run with minimal required capabilities.
+
+See https://avd.aquasec.com/misconfig/ksv-0004
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0011 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'resources.limits.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing CPU limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0011
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0013 (MEDIUM): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should specify an image tag
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+It is best to avoid using the ':latest' image tag when deploying containers in production. Doing so makes it hard to track which version of the image is running, and hard to roll back the version.
+
+See https://avd.aquasec.com/misconfig/ksv-0013
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0015 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'resources.requests.cpu'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have resource requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0015
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0016 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'resources.requests.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When containers have memory requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.
+
+See https://avd.aquasec.com/misconfig/ksv-0016
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0018 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'resources.limits.memory'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Enforcing memory limits prevents DoS via resource exhaustion.
+
+See https://avd.aquasec.com/misconfig/ksv-0018
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0020 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'sealed-secrets-controller' of Deployment 'sealed-secrets-controller' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0030 (LOW): Either Pod or Container should set 'securityContext.seccompProfile.type' to 'RuntimeDefault'
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+According to pod security standard 'Seccomp', the RuntimeDefault seccomp profile must be required, or allow specific additional profiles.
+
+See https://avd.aquasec.com/misconfig/ksv-0030
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0037 (MEDIUM): Deployment 'sealed-secrets-controller' should not be set with 'kube-system' namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+ensure that user resources are not placed in kube-system namespace
+
+See https://avd.aquasec.com/misconfig/ksv-0037
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:9-62
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   9 ┌ spec:
+  10 │   minReadySeconds: 30
+  11 │   replicas: 1
+  12 │   revisionHistoryLimit: 10
+  13 │   selector:
+  14 │     matchLabels:
+  15 │       name: sealed-secrets-controller
+  16 │   strategy:
+  17 └     rollingUpdate:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0104 (MEDIUM): container "sealed-secrets-controller" of deployment "sealed-secrets-controller" in "kube-system" namespace should specify a seccomp profile
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+A program inside the container can bypass Seccomp protection policies.
+
+See https://avd.aquasec.com/misconfig/ksv-0104
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0106 (LOW): container should drop all
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Containers must drop ALL capabilities, and are only permitted to add back the NET_BIND_SERVICE capability.
+
+See https://avd.aquasec.com/misconfig/ksv-0106
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container sealed-secrets-controller in deployment sealed-secrets-controller (namespace: kube-system) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/sealed-secret-controller.yaml:28-53
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌         - args: []
+  29 │           command:
+  30 │             - controller
+  31 │           image: bitnami/sealed-secrets-controller:latest
+  32 │           imagePullPolicy: Always
+  33 │           livenessProbe:
+  34 │             httpGet:
+  35 │               path: /healthz
+  36 └               port: http
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/secret-challenge-deployment.yml (kubernetes)
+================================================
+Tests: 101 (SUCCESSES: 97, FAILURES: 4)
+Failures: 4 (UNKNOWN: 0, LOW: 3, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0020 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-deployment.yml:31-100
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           imagePullPolicy: IfNotPresent
+  33 │           name: secret-challenge
+  34 │           ports:
+  35 │             - containerPort: 8080
+  36 │               protocol: TCP
+  37 │             - containerPort: 8090
+  38 │               protocol: TCP
+  39 └           readinessProbe:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-deployment.yml:31-100
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           imagePullPolicy: IfNotPresent
+  33 │           name: secret-challenge
+  34 │           ports:
+  35 │             - containerPort: 8080
+  36 │               protocol: TCP
+  37 │             - containerPort: 8090
+  38 │               protocol: TCP
+  39 └           readinessProbe:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): deployment secret-challenge in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-deployment.yml:3-7
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 │   labels:
+   5 │     app: secret-challenge
+   6 │   name: secret-challenge
+   7 └   namespace: default
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge in deployment secret-challenge (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-deployment.yml:31-100
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           imagePullPolicy: IfNotPresent
+  33 │           name: secret-challenge
+  34 │           ports:
+  35 │             - containerPort: 8080
+  36 │               protocol: TCP
+  37 │             - containerPort: 8090
+  38 │               protocol: TCP
+  39 └           readinessProbe:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+k8s/secret-challenge-vault-deployment.yml (kubernetes)
+======================================================
+Tests: 101 (SUCCESSES: 97, FAILURES: 4)
+Failures: 4 (UNKNOWN: 0, LOW: 3, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0020 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-vault-deployment.yml:53-130
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  53 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.3-k8s-vault
+  54 │           imagePullPolicy: IfNotPresent
+  55 │           name: secret-challenge
+  56 │           command: ["/bin/sh"]
+  57 │           args:
+  58 │             [
+  59 │               "-c",
+  60 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  61 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-vault-deployment.yml:53-130
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  53 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.3-k8s-vault
+  54 │           imagePullPolicy: IfNotPresent
+  55 │           name: secret-challenge
+  56 │           command: ["/bin/sh"]
+  57 │           args:
+  58 │             [
+  59 │               "-c",
+  60 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  61 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0110 (LOW): deployment secret-challenge in default namespace should set metadata.namespace to a non-default namespace
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Checks whether a workload is running in the default namespace.
+
+See https://avd.aquasec.com/misconfig/ksv-0110
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-vault-deployment.yml:3-7
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   3 ┌ metadata:
+   4 │   labels:
+   5 │     app: secret-challenge
+   6 │   name: secret-challenge
+   7 └   namespace: default
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge in deployment secret-challenge (namespace: default) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ k8s/secret-challenge-vault-deployment.yml:53-130
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  53 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.3-k8s-vault
+  54 │           imagePullPolicy: IfNotPresent
+  55 │           name: secret-challenge
+  56 │           command: ["/bin/sh"]
+  57 │           args:
+  58 │             [
+  59 │               "-c",
+  60 │               "source /vault/secrets/challenge46 && source /vault/secrets/challenge47 && java -jar -Dspring.profiles.active=kubernetes-vault -Dspringdoc.swagger-ui.enabled=true -Dspringdoc.api-docs.enabled=true -D /application/application.jar",
+  61 └             ]
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+okteto/k8s/secret-challenge-ctf-deployment.yml (kubernetes)
+===========================================================
+Tests: 101 (SUCCESSES: 98, FAILURES: 3)
+Failures: 3 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0020 (LOW): Container 'secret-challenge-ctf' of Deployment 'secret-challenge-ctf' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-ctf-deployment.yml:31-119
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge-ctf
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge-ctf' of Deployment 'secret-challenge-ctf' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-ctf-deployment.yml:31-119
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge-ctf
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge-ctf in deployment secret-challenge-ctf (namespace: $OKTETO_NAMESPACE) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-ctf-deployment.yml:31-119
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge-ctf
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+okteto/k8s/secret-challenge-deployment.yml (kubernetes)
+=======================================================
+Tests: 101 (SUCCESSES: 98, FAILURES: 3)
+Failures: 3 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+KSV-0020 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsUser' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with user ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0020
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-deployment.yml:31-103
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0021 (LOW): Container 'secret-challenge' of Deployment 'secret-challenge' should set 'securityContext.runAsGroup' > 10000
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Force the container to run with group ID > 10000 to avoid conflicts with the host’s user table.
+
+See https://avd.aquasec.com/misconfig/ksv-0021
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-deployment.yml:31-103
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+KSV-0125 (MEDIUM): Container secret-challenge in deployment secret-challenge (namespace: $OKTETO_NAMESPACE) uses an image from an untrusted registry.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Ensure that all containers use images only from trusted registry domains.
+
+See https://avd.aquasec.com/misconfig/ksv-0125
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ okteto/k8s/secret-challenge-deployment.yml:31-103
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  31 ┌         - image: jeroenwillemsen/wrongsecrets:1.13.5-no-vault
+  32 │           name: secret-challenge
+  33 │           imagePullPolicy: IfNotPresent
+  34 │           securityContext:
+  35 │             allowPrivilegeEscalation: false
+  36 │             readOnlyRootFilesystem: true
+  37 │             runAsNonRoot: true
+  38 │             capabilities:
+  39 └               drop:
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+terraform-aws-modules/eks/aws/main.tf (terraform)
+=================================================
+Tests: 3 (SUCCESSES: 0, FAILURES: 3)
+Failures: 3 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 1)
+
+AWS-0038 (MEDIUM): Control plane controller manager logging is not enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+By default cluster control plane logging is not turned on. Logging is available for audit, api, authenticator, controllerManager and scheduler. All logging should be turned on for cluster control plane.
+
+
+See https://avd.aquasec.com/misconfig/aws-0038
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ terraform-aws-modules/eks/aws/main.tf:36-213
+   via aws/main.tf:66-95 (module.eks)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  36 ┌ resource "aws_eks_cluster" "this" {
+  37 │   count = local.create ? 1 : 0
+  38 │ 
+  39 │   region = var.region
+  40 │ 
+  41 │   name                          = var.name
+  42 │   role_arn                      = local.role_arn
+  43 │   version                       = var.kubernetes_version
+  44 └   enabled_cluster_log_types     = var.enabled_log_types
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0038 (MEDIUM): Control plane scheduler logging is not enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+By default cluster control plane logging is not turned on. Logging is available for audit, api, authenticator, controllerManager and scheduler. All logging should be turned on for cluster control plane.
+
+
+See https://avd.aquasec.com/misconfig/aws-0038
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ terraform-aws-modules/eks/aws/main.tf:36-213
+   via aws/main.tf:66-95 (module.eks)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  36 ┌ resource "aws_eks_cluster" "this" {
+  37 │   count = local.create ? 1 : 0
+  38 │ 
+  39 │   region = var.region
+  40 │ 
+  41 │   name                          = var.name
+  42 │   role_arn                      = local.role_arn
+  43 │   version                       = var.kubernetes_version
+  44 └   enabled_cluster_log_types     = var.enabled_log_types
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+AWS-0040 (CRITICAL): Public cluster access is enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+EKS clusters are available publicly by default, this should be explicitly disabled in the vpc_config of the EKS cluster resource.
+
+
+See https://avd.aquasec.com/misconfig/aws-0040
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ terraform-aws-modules/eks/aws/main.tf:82
+   via terraform-aws-modules/eks/aws/main.tf:78-84 (vpc_config)
+    via terraform-aws-modules/eks/aws/main.tf:36-213 (aws_eks_cluster.this[0])
+     via aws/main.tf:66-95 (module.eks)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  36   resource "aws_eks_cluster" "this" {
+  ..   
+  82 [     endpoint_public_access  = var.endpoint_public_access
+ ...   
+ 213   }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+terraform-aws-modules/eks/aws/node_groups.tf (terraform)
+========================================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 1)
+
+AWS-0104 (CRITICAL): Security group rule allows unrestricted egress to any IP address.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Opening up ports to connect out to the public internet is generally to be avoided. You should restrict access to IP addresses or ranges that are explicitly required where possible.
+
+
+See https://avd.aquasec.com/misconfig/aws-0104
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ terraform-aws-modules/eks/aws/node_groups.tf:216
+   via terraform-aws-modules/eks/aws/node_groups.tf:201-221 (aws_security_group_rule.node["egress_all"])
+    via aws/main.tf:66-95 (module.eks)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 201   resource "aws_security_group_rule" "node" {
+ ...   
+ 216 [   cidr_blocks              = try(each.value.cidr_blocks, null)
+ ...   
+ 221   }
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+terraform-aws-modules/vpc/aws/main.tf (terraform)
+=================================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+AWS-0178 (MEDIUM): VPC does not have VPC Flow Logs enabled.
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+VPC Flow Logs provide visibility into network traffic that traverses the VPC and can be used to detect anomalous traffic or insight during security workflows.
+
+
+See https://avd.aquasec.com/misconfig/aws-0178
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ terraform-aws-modules/vpc/aws/main.tf:28-53
+   via aws/main.tf:41-63 (module.vpc)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  28 ┌ resource "aws_vpc" "this" {
+  29 │   count = local.create_vpc ? 1 : 0
+  30 │ 
+  31 │   region = var.region
+  32 │ 
+  33 │   cidr_block          = var.use_ipam_pool ? null : var.cidr
+  34 │   ipv4_ipam_pool_id   = var.ipv4_ipam_pool_id
+  35 │   ipv4_netmask_length = var.ipv4_netmask_length
+  36 └ 
+  ..   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
